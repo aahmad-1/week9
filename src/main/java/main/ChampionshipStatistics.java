@@ -4,8 +4,8 @@ import java.util.*;
 
 public class ChampionshipStatistics {
     public static double calculateAveragePointsPerDriver(List<Driver> drivers) {
-        double average = (double) ChampionshipManager.getTotalChampionshipPoints() / ChampionshipManager.getTotalDrivers();
-        return average;
+        double averagePointsPerDriver = (double) ChampionshipManager.getTotalChampionshipPoints() / ChampionshipManager.getTotalDrivers();
+        return averagePointsPerDriver;
     }
 
     public static String findMostSuccessfulCountry(List<Driver> drivers) {
