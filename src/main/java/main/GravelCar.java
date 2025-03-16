@@ -16,6 +16,6 @@ public class GravelCar extends RallyCar {
     public double calculatePerformance() {
         // Example calculation that takes into account suspensionTravel into the performance as
         // well as a different factor for horsepower
-        return getHorsepower() + suspensionTravel;
+        return getHorsepower() * 0.72 + suspensionTravel * 10.27;
     }
 }

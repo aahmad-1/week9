@@ -16,6 +16,6 @@ public class AsphaltCar extends RallyCar {
     public double calculatePerformance() {
         // Example calculation that takes into account downforce into the performance as
         // well as a different factor for horsepower
-        return getHorsepower()+ downforce;
+        return getHorsepower() * 0.82 + downforce * 5.13;
     }
 }

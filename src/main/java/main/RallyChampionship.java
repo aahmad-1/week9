@@ -54,7 +54,7 @@ public class RallyChampionship {
         System.out.println("\n===== RACE RESULTS ====");
         for (RaceResult result : manager.getRaces()) {
             RallyRaceResult rallyResult = (RallyRaceResult) result;
-            System.out.println("Race: " + rallyResult.getRaceName() + " " + "(" + rallyResult.getLocation() + ")");
+            System.out.println("Race: " + rallyResult.getRaceName() + " (" + rallyResult.getLocation() + ")");
             List<Driver> results = rallyResult.getResults();
             for (int i = 0; i < results.size(); i++) {
                 System.out.println("    Position " + (i + 1) + ": " + results.get(i).getName() + " - " + rallyResult.getDriverPoints(results.get(i)) + " points");
