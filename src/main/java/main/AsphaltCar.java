@@ -1,14 +1,16 @@
 package main;
 
+// Subclass of RallyCar for spedific Asphalt Cars
 public class AsphaltCar extends RallyCar {
     private double downforce;
 
+    // Constructor
     public AsphaltCar(String make, String model, int horsepower, double downforce) {
         super(make, model, horsepower); //is used to call the constructor of the parent class
         this.downforce = downforce;
     }
 
-    public double getDownforce() {
+    public double getDownforce() { //Getter for the car's downforce
         return downforce;
     }
 

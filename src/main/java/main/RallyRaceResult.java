@@ -10,26 +10,29 @@ public class RallyRaceResult implements RaceResult {
     private String location;
     private Map<Driver, Integer> results;
 
+    // Constructor
     public RallyRaceResult(String raceName, String location) {
         this.raceName = raceName;
         this.location = location;
         this.results = new HashMap<>();
     }
 
-    public String getRaceName() {
+    public String getRaceName() { // Getter for the race name
         return raceName;
     }
 
-    public String getLocation() {
+    public String getLocation() { // Getter for the race location
         return location;
     }
 
+    // Records the results for a driver
     @Override
     public void recordResult(Driver driver, int position, int points) {
         driver.addPoints(points);
         results.put(driver, points);
     }
 
+    // Retrieves the points for a given driver
     @Override
     public int getDriverPoints(Driver driver) {
         // Retrieve the points for the given driver from the results map

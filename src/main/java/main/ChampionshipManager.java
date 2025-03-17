@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+// Singleton class to manage the rally championship
 public class ChampionshipManager {
     private static ChampionshipManager instance;
     private List<Driver> drivers;
@@ -10,6 +11,7 @@ public class ChampionshipManager {
     private static int totalDrivers; 
     private static int totalRaces; 
 
+    // Private constructor to enforce Singleton pattern
     private ChampionshipManager() {
         drivers = new ArrayList<>();
         races = new ArrayList<>();
@@ -17,6 +19,7 @@ public class ChampionshipManager {
         totalRaces = 0;
     }
 
+    // Get the singleton instance of the ChampionshipManager
     public static ChampionshipManager getInstance() {
         if (instance == null) {
             instance = new ChampionshipManager();
@@ -24,22 +27,26 @@ public class ChampionshipManager {
         return instance;
     }
 
+    // Register a new driver in the championship
     public void registerDriver(Driver driver) {
         drivers.add(driver);
         totalDrivers++; // Increment totalDrivers
     }
 
+
+    // Add the race results
     public void addRaceResult(RallyRaceResult result) { 
         races.add(result);
         totalRaces++; // Increment totalRaces
     }
 
+    // Sort the drivers by their points in descending order
     public List<Driver> getDriverStandings() {
-        // Sort the drivers by their points in descending order
         drivers.sort((d1, d2) -> Integer.compare(d2.getPoints(), d1.getPoints()));
         return drivers;
     }
 
+    // Get the leading driver in the championship
     public static Driver getLeadingDriver() { 
         if (instance == null || instance.drivers.isEmpty()) {
             return null;
@@ -50,6 +57,7 @@ public class ChampionshipManager {
         return leadingDriver; // Return the driver with the highest points (first in the standings)
     }
 
+    // Get the total championship points per driver
     public static int getTotalChampionshipPoints() { 
         if (instance == null) {
             return 0;

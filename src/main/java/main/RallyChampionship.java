@@ -4,6 +4,7 @@ import java.util.List;
 
 public class RallyChampionship {
     public static void main(String[] args) {
+        // Get the singleton instance of ChampionshipManager
         ChampionshipManager manager = ChampionshipManager.getInstance();
 
         // Create drivers and cars
@@ -12,13 +13,13 @@ public class RallyChampionship {
         Driver driver3 = new Driver("Ott Tänak", "Estonia", new GravelCar("Hyundai", "i20", 370, 11));
         Driver driver4 = new Driver("Thierry Neuville", "Belgium", new AsphaltCar("Hyundai", "i20", 390, 7.5));
 
-        // Register drivers
+        // Register the drivers
         manager.registerDriver(driver1);
         manager.registerDriver(driver2);
         manager.registerDriver(driver3);
         manager.registerDriver(driver4);
 
-        // Simulate races
+        // Simulate races & record results
         RallyRaceResult race1 = new RallyRaceResult("Rally Finland", "Jyväskylä");
         race1.recordResult(driver1, 1, 25);
         race1.recordResult(driver3, 2, 18);
@@ -59,7 +60,7 @@ public class RallyChampionship {
             for (int i = 0; i < results.size(); i++) {
                 System.out.println("    Position " + (i + 1) + ": " + results.get(i).getName() + " - " + rallyResult.getDriverPoints(results.get(i)) + " points");
             }
-            System.out.println(); // Add a newline after each race's results
+            System.out.println();
         }
 
         // Display car performance ratings
