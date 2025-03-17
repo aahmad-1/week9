@@ -12,15 +12,18 @@ public abstract class RallyCar {
         this.horsepower = horsepower;
     }
 
-    public String getMake() { // Getter for the car's make
+    // Getter for the car's make
+    public String getMake() {
         return make;
     }
 
-    public String getModel() { // Getter for the car's model
+    // Getter for the car's model
+    public String getModel() {
         return model;
     }
 
-    public int getHorsepower() { // Getter for the car's horsepower
+    // Getter for the car's horsepower
+    public int getHorsepower() { 
         return horsepower;
     }
 

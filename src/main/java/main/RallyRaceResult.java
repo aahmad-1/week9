@@ -17,11 +17,13 @@ public class RallyRaceResult implements RaceResult {
         this.results = new HashMap<>();
     }
 
-    public String getRaceName() { // Getter for the race name
+    // Getter for the race name
+    public String getRaceName() { 
         return raceName;
     }
 
-    public String getLocation() { // Getter for the race location
+    // Getter for the race location
+    public String getLocation() { 
         return location;
     }
 

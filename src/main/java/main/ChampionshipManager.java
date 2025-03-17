@@ -70,15 +70,18 @@ public class ChampionshipManager {
         return totalPoints;    
     }
 
-    public List<RallyRaceResult> getRaces() {  // getter for races
+    // getter for races
+    public List<RallyRaceResult> getRaces() {  
         return races;
     }
 
-    public static int getTotalDrivers() { // getter for totalDrivers
+    // getter for totalDrivers
+    public static int getTotalDrivers() { 
         return totalDrivers;
     }
 
-    public static int getTotalRaces() { // getter for totalRaces
+    // getter for totalRaces
+    public static int getTotalRaces() { 
         return totalRaces;
     }
 }

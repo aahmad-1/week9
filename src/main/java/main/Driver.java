@@ -14,23 +14,28 @@ public class Driver {
         this.points = 0;
     }
 
-    public String getName() { //Getter for the driver's name
+    //Getter for the driver's name
+    public String getName() { 
         return name;
     }
 
-    public String getCountry() { //Getter for the driver's country
+    //Getter for the driver's country
+    public String getCountry() { 
         return country;
     }
 
-    public int getPoints() { //Getter for the driver's points
+    //Getter for the driver's points
+    public int getPoints() { 
         return points;
     }
 
-    public RallyCar getCar() { // Getter for the driver's car type (GravelCar or AsphaltCar)
+    // Getter for the driver's car type (GravelCar or AsphaltCar)
+    public RallyCar getCar() { 
         return car;
     }
 
-    public void setCar(RallyCar car) { // Setter for the driver's car type (GravelCar or AsphaltCar)
+    // Setter for the driver's car type (GravelCar or AsphaltCar)
+    public void setCar(RallyCar car) { 
         this.car = car;
     }
 
