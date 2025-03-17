@@ -1,6 +1,6 @@
 package main;
 
-// Subclass of RallyCar for spedific Asphalt Cars
+// Subclass of RallyCar for specific Asphalt Cars
 public class AsphaltCar extends RallyCar {
     private double downforce;
 

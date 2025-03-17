@@ -1,6 +1,6 @@
 package main;
 
-// Subclass of RallyCar for speciifc Gravel Cars
+// Subclass of RallyCar for specific Gravel Cars
 public class GravelCar extends RallyCar {
     private double suspensionTravel;
 

@@ -36,8 +36,11 @@ public class RallyChampionship {
 
         // Display championship standings
         System.out.println("===== CHAMPIONSHIP STANDINGS ====");
-        manager.getDriverStandings().forEach(driver -> 
-            System.out.println(driver.getName() + " (" + driver.getCountry() + "): " + driver.getPoints() + " points"));
+        List<Driver> standings = manager.getDriverStandings(); 
+        for (int i = 0; i < standings.size(); i++) {
+            Driver driver = standings.get(i); 
+            System.out.println(driver.getName() + " (" + driver.getCountry() + "): " + driver.getPoints() + " points");
+        }
 
         // Display championship leader
         System.out.println("\n===== CHAMPIONSHIP LEADER ====");

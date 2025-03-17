@@ -22,7 +22,7 @@ public abstract class RallyCar {
         return model;
     }
 
-    // Getter for the car's horsepower
+    // Getter for the car's horsepowerx
     public int getHorsepower() { 
         return horsepower;
     }
