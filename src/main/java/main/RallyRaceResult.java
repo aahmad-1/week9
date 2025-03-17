@@ -32,7 +32,11 @@ public class RallyRaceResult implements RaceResult {
 
     @Override
     public int getDriverPoints(Driver driver) {
-        return results.getOrDefault(driver, 0);
+        // Retrieve the points for the given driver from the results map
+        int driverPoints = results.getOrDefault(driver, 0);
+
+        // Return the driver's points (defaults to 0 if not found)
+        return driverPoints;
     }
 
     @Override

@@ -35,6 +35,7 @@ public class ChampionshipManager {
     }
 
     public List<Driver> getDriverStandings() {
+        // Sort the drivers by their points in descending order
         drivers.sort((d1, d2) -> Integer.compare(d2.getPoints(), d1.getPoints()));
         return drivers;
     }
@@ -43,7 +44,10 @@ public class ChampionshipManager {
         if (instance == null || instance.drivers.isEmpty()) {
             return null;
         }
-        return instance.getDriverStandings().get(0);
+        // Get the sorted list of drivers (standings)
+        List<Driver> standings = instance.getDriverStandings();
+        Driver leadingDriver = standings.get(0);
+        return leadingDriver; // Return the driver with the highest points (first in the standings)
     }
 
     public static int getTotalChampionshipPoints() { 
@@ -58,7 +62,7 @@ public class ChampionshipManager {
         return totalPoints;    
     }
 
-    public List<RallyRaceResult> getRaces() { 
+    public List<RallyRaceResult> getRaces() {  // getter for races
         return races;
     }
 
